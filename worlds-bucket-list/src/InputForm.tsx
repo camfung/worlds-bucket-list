@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Input, Button, Space } from 'antd';
-import { Wc } from '@mui/icons-material';
 
 interface InputFormProps {
   onSubmit: (value: string) => void;
@@ -9,7 +8,6 @@ interface InputFormProps {
 const InputForm: React.FC<InputFormProps> = ({ onSubmit }) => {
   const [inputValue, setInputValue] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [admin, setAdmin] = useState(false);
 
   // Check local storage on component mount
   useEffect(() => {
@@ -30,7 +28,6 @@ const InputForm: React.FC<InputFormProps> = ({ onSubmit }) => {
   useEffect(() => {
     const admin = localStorage.getItem("admin")
     if (admin == "1") {
-      setAdmin(true)
       setIsSubmitted(false)
     }
   }, []);

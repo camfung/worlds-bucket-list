@@ -1,7 +1,7 @@
 import { message, Button, List, Space, Spin } from "antd";
-import { bucketListApi, BucketListItem, calculateScore, voteStorage, VoteType } from "./api/api";
-import { CheckOutlined, CloseOutlined, DeleteOutline, DeleteOutlineTwoTone, KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
-import { ArrowDownOutlined, ArrowUpOutlined, LoadingOutlined, MinusOutlined } from "@ant-design/icons";
+import { bucketListApi, BucketListItem, calculateScore, voteStorage } from "./api/api";
+import { DeleteOutline } from "@mui/icons-material";
+import { ArrowDownOutlined, ArrowUpOutlined, LoadingOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 
 interface BucketListProps {
