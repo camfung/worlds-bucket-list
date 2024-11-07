@@ -14,6 +14,7 @@ const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />
 
 export const BucketList: React.FC<BucketListProps> = ({ items, loading, setItems, fetchItems }) => {
   const [admin, setAdmin] = useState(false)
+
   const handleVote = async (id: number, isUpvote: boolean) => {
     const votedItems = JSON.parse(localStorage.getItem('votedItems') || '{}');
 
@@ -35,7 +36,7 @@ export const BucketList: React.FC<BucketListProps> = ({ items, loading, setItems
 
       localStorage.setItem('votedItems', JSON.stringify({
         ...votedItems,
-        [id]: isUpvote
+        [id]: isUpvote ? "yes" : "no"
       }));
 
       message.success(`Successfully ${isUpvote ? 'upvoted' : 'downvoted'}`);
