@@ -32,7 +32,7 @@ function App() {
 
   const get = async () => {
     const items = await bucketListApi.get()
-    items.sort((a: BucketListItem, b: BucketListItem) => (Math.abs(b.upvotes - b.downvotes)) - (Math.abs(a.upvotes - a.downvotes)));
+    items.sort((a: BucketListItem, b: BucketListItem) => (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes));
     setItems(items)
   }
   useEffect(() => {
