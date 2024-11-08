@@ -1,7 +1,7 @@
 // api.ts
 import axios from 'axios';
 
-const BASE_URL = 'https://api.worldsbucketlist.xyz'
+const BASE_URL = import.meta.env.VITE_BACKEND_URL
 
 export interface BucketListItem {
 	id: number;

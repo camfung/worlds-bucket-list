@@ -85,9 +85,7 @@ export const BucketList: React.FC<BucketListProps> = ({ items, loading, setItems
                     onClick={() => handleVote(item.id, true)}
                     style={{
                       cursor: 'pointer',
-                      color: voteStatus.voteType === 'yes' ? '#1890ff' : // blue for yes
-                        voteStatus.voteType === 'no' ? '#ff4d4f' :  // red for no
-                          '#808080'                               // grey for novote
+                      color: voteStatus.voteType === 'yes' ? '#1890ff' : '#808080'
                     }}
                   >
                     <ArrowUpOutlined />
@@ -97,9 +95,7 @@ export const BucketList: React.FC<BucketListProps> = ({ items, loading, setItems
                     onClick={() => handleVote(item.id, false)}
                     style={{
                       cursor: 'pointer',
-                      color: voteStatus.voteType === 'no' ? '#ff4d4f' :  // red for no
-                        voteStatus.voteType === 'yes' ? '#1890ff' : // blue for yes
-                          '#808080'                               // grey for novote
+                      color: voteStatus.voteType === 'no' ? '#ff4d4f' : '#808080'
                     }}
                   >
                     <ArrowDownOutlined />
